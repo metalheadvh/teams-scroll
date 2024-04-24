@@ -2,44 +2,65 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Anta", sans-serif;
+  font-family: "UEFA Supercup", sans-serif;
   font-weight: 400;
-  font-style: normal;
   overflow-x: hidden;
 }
 
 body {
-  background-color: #d7d9ce;
+  background-color: #143cdb;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 1rem;
+  border: 1px solid white;
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+.wrapper h1 {
+  color: black;
+}
+
 .euro-logo {
   width: 100px;
-  margin: 2rem;
+  margin: 2rem 0 1rem;
 }
 
 h1 {
   margin: 10px;
   text-align: center;
+  color: white;
 }
 
 .box {
-  background-color: #119da4;
   color: white;
+  letter-spacing: 0.1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
   transform: translateX(400%);
   transition: transform 0.5s ease;
+  background-image: linear-gradient(0deg, rgba(60, 60, 60, 0.5), #143cdb90), url(assets/cover.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 .box:nth-of-type(even) {
@@ -58,11 +79,45 @@ h1 {
 
 .box img {
   width: 100px;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+}
+
+footer {
+  padding: 2rem;
+  margin-top: 1rem;
+  color: black;
+  background-color: white;
+  border-top: 1px solid white;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer button {
+  background-color: transparent;
+  max-width: 400px;
+  margin: 0 1rem;
+  padding: 0.5rem 4rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #143cdb;
+  transition: 0.2s ease;
+}
+
+footer button:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #143cdb;
 }
 
 @media (max-width: 410px) {
   .box {
-    width: 300px;
+    max-width: 300px;
   }
 }
